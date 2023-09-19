@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Instagram Clone</string>
+    <string name="navigation_drawer_open">Open Drawer</string>
+    <string name="navigation_drawer_close">Close Drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toolbar_name">𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦</string>
+    <string name="sidebar_image_icon">sidebar_image_icon</string>
+    <string name="select_image_or_video">select_image_or_video</string>
+    <string name="write_a_caption">Write a Caption</string>
+    <string name="extra">Extra</string>
+    <string name="share_to_post">Share to Post</string>
+    <string name="post_next_details">Your post will be appear in Posts and can be seen on the posts tab unde your profile.</string>
+    <string name="cancel">Cancel</string>
+    <string name="post">Post</string>
+    <string name="select_video_from_gallery">Select Video From Gallery</string>
+    <string name="share_to_rell">Share to Rell</string>
+    <string name="video_icon">video_icon</string>
+    <string name="profile_image_icon">profile_image_icon</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="password_com">Password</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account_sign_in">Already have an account? Sign In</string>
+    <string name="leave_icon">leave icon</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="change_photo">Change Photo</string>
+    <string name="website">Website</string>
+    <string name="bio">Bio</string>
+    <string name="private_information">Private Information</string>
+    <string name="search">Search...</string>
+    <string name="posts">Posts</string>
+    <string name="reals">Reals</string>
+    <string name="following">Following</string>
+    <string name="hello_my_name_is_sabuj">Hello my name is sabuj...</string>
+    <string name="create_post">Create Post</string>
+    <string name="create_rell">Create Rell</string>
+    <string name="sabuj_ahmed">Sabuj Ahmed</string>
+    <string name="sabuj006_gmail_com">sabuj006@gmail.com</string>
+    <string name="_665_hours_ago">665 hours ago</string>
+    <string name="sabuj_ahmed_made_this_video_for_this_project">Sabuj Ahmed made this video for this project...</string>
+    <string name="_302">302</string>
+    <string name="_505">505</string>
+    <string name="_10k">10K</string>
+    <string name="instagram">Instagram</string>
+    <string name="forgotton_password">Forgotton Password?</string>
+    <string name="log_in">Log in</string>
+    <string name="or">OR</string>
+    <string name="log_with_facebook">Log With Facebook</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="android_sabuj">Android Sabuj</string>
+    <string name="follow">Follow</string>
+    <string name="toolbar_favourite">Favourite Post</string>
+
+
+    <style name="edit_profile_input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+    </style>
+
+    <style name="edit_profile_label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">23dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+</resources>

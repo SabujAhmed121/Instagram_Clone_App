@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#BBB</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="whiteIsh">#FAFAFA</color>
+    <color name="blue">#3897F0</color>
+    <color name="red">#D9555A</color>
+
+    <color name="bottomGrey">#F1F0EE</color>
+    <color name="viewLine">#B8ADAD</color>
+
+    <color name="pinkGrey">#FDF3EB</color>
+    <color name="pinkLight">#FBB7A0</color>
+    <color name="darkBlack">#0B0A0A</color>
+
+    <color name="chocholoteGrey">#6D6868</color>
+    <color name="lightRed">#FF4202</color>
+
+    <color name="sweetYellow">#E6D85B</color>
+    <color name="searchBgColour">#DDD8D8</color>
+
+    //edit profile fragment colour
+
+    <color name="editProfileBg">#FAB2B2</color>
+    <color name="textDarkGrey">#666161</color>
+
+    <color name="yellowType">#FBA800</color>
+
+
+
+</resources>

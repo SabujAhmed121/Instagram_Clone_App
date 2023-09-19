@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="post_next_details">Your post will be appear in Posts and can be seen on the posts tab unde your profile.</string>
+    <string name="cancel">Cancel</string>
+    <string name="password_com">Password</string>
+    <string name="website">Website</string>
+    <string name="bio">Bio</string>
+    <string name="private_information">Private Information</string>
+    <string name="posts">Posts</string>
+    <string name="following">Following</string>
+    <string name="create_rell">Create Rell</string>
+    <string name="sabuj_ahmed">Sabuj Ahmed</string>
+    <string name="sabuj_ahmed_made_this_video_for_this_project">Sabuj Ahmed made this video for this project...</string>
+    <string name="_302">302</string>
+    <string name="_505">505</string>
+    <string name="_10k">10K</string>
+    <string name="forgotton_password">Forgotton Password?</string>
+    <string name="log_in">Log in</string>
+    <string name="or">OR</string>
+    <string name="log_with_facebook">Log With Facebook</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="android_sabuj">Android Sabuj</string>
+    <string name="follow">Follow</string>
+</resources>

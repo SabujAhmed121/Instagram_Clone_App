@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gredient_bg"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/register_wei_hei"
+        android:layout_height="@dimen/register_wei_hei"
+        android:layout_marginTop="@dimen/reals_margin_top"
+        android:src="@drawable/person"
+        app:civ_border_color="@color/grey"
+        app:civ_border_width="1dp"
+        android:contentDescription="@string/profile_image_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/plusIcon"
+        android:layout_width="@dimen/button_margin_top"
+        android:layout_height="@dimen/button_margin_top"
+        android:background="@color/whiteIsh"
+        android:src="@drawable/add_icon"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <EditText
+        android:id="@+id/usernameRegister"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginHorizontal="@dimen/margin_horizon"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/edit_bg"
+        android:hint="@string/username"
+        android:paddingHorizontal="@dimen/padding_horizontal"
+        android:paddingLeft="@dimen/margin_left_facebook"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <EditText
+        android:id="@+id/email_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginHorizontal="@dimen/margin_horizon"
+        android:background="@drawable/edit_bg"
+        android:hint="@string/email"
+        android:paddingHorizontal="@dimen/padding_horizontal"
+        android:layout_marginTop="@dimen/margin_horizon"
+        android:paddingStart="@dimen/margin_left_facebook"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintTop_toBottomOf="@+id/usernameRegister"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/passwordRegister"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginHorizontal="@dimen/margin_horizon"
+        android:background="@drawable/edit_bg"
+        android:hint="@string/password"
+        android:layout_marginTop="@dimen/margin_horizon"
+        android:paddingHorizontal="@dimen/padding_horizontal"
+        android:paddingStart="@dimen/margin_horizon"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintTop_toBottomOf="@+id/email_register" />
+
+    <EditText
+        android:id="@+id/comfram_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginHorizontal="@dimen/margin_horizon"
+        android:background="@drawable/edit_bg"
+        android:hint="@string/password_com"
+        android:paddingHorizontal="@dimen/padding_horizontal"
+        android:layout_marginTop="@dimen/margin_horizon"
+        android:paddingStart="@dimen/margin_horizon"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintTop_toBottomOf="@+id/passwordRegister" />
+
+    <Button
+        android:id="@+id/register_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/sweetYellow"
+        android:text="@string/register"
+        android:textStyle="bold"
+        android:textColor="@color/darkBlack"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="@dimen/margin_horizon"
+        android:layout_marginTop="@dimen/edit_padding"
+        android:padding="@dimen/margin_horizon"
+        android:textSize="@dimen/text_size_login"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comfram_password" />
+
+    <TextView
+        android:id="@+id/alreadyhave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/already_have_an_account_sign_in"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_reals"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/alreadyhave"
+        android:layout_marginBottom="@dimen/video_wei_hei"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

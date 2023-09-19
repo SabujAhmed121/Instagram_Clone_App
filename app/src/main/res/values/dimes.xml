@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding_horizontal">20dp</dimen>
+    <dimen name="margin_horizon">16dp</dimen>
+    <dimen name="text_size_reals">18sp</dimen>
+    <dimen name="button_text_size">24sp</dimen>
+    <dimen name="card_elevation">80dp</dimen>
+    <dimen name="text_size_text">16sp</dimen>
+
+
+
+
+
+    //login
+    <dimen name="logo_text_size">50sp</dimen>
+    <dimen name="edit_height">55dp</dimen>
+    <dimen name="logo_margin_top">150dp</dimen>
+    <dimen name="margin_bottom_login">20dp</dimen>
+    <dimen name="text_size_login">18sp</dimen>
+    <dimen name="margin_top_login">30dp</dimen>
+    <dimen name="margin_left_facebook">16dp</dimen>
+    <dimen name="margin_start_face_icon">120dp</dimen>
+    <dimen name="icon_hei_wei">35dp</dimen>
+    <dimen name="margin_left_view">10dp</dimen>
+    <dimen name="view_height">2dp</dimen>
+    <dimen name="text_size">15sp</dimen>
+    <dimen name="card_radius">8dp</dimen>
+
+    //main
+    <dimen name="side_bar_weight">300dp</dimen>
+    <dimen name="bottom_bar_height">60sp</dimen>
+    <dimen name="image_hei_wei">22dp</dimen>
+    <dimen name="text_size_main">25dp</dimen>
+    <dimen name="text_size_main_text">25sp</dimen>
+
+    //Reals
+
+
+    <dimen name="video_wei_hei">80dp</dimen>
+    <dimen name="video_margin_height">172dp</dimen>
+    <dimen name="button_margin_top">32dp</dimen>
+    <dimen name="edit_padding">25dp</dimen>
+
+    <dimen name="image_top_margin">34dp</dimen>
+    <dimen name="padding_button_">58dp</dimen>
+
+    //Register
+
+    <dimen name="register_wei_hei">110dp</dimen>
+    <dimen name="reals_margin_top">132dp</dimen>
+
+
+    //Activity Post
+
+    <dimen name="post_wei_hei">150dp</dimen>
+    <dimen name="post_margin_top">160dp</dimen>
+    <dimen name="post_margin_top_edit">36dp</dimen>
+    <dimen name="post_padding_horizon">60dp</dimen>
+    <dimen name="post_padding_horizon_second">65dp</dimen>
+
+    //Follow Item Home
+
+    <dimen name="profile_item_wei_hei">70dp</dimen>
+
+    //Fragment Home
+
+    <dimen name="home_margin_vertical">10dp</dimen>
+    <dimen name="home_wei_hei">75dp</dimen>
+    <dimen name="margin_start">20dp</dimen>
+
+    //Item Reals User
+
+    <dimen name="Reals_Item_margin">5sp</dimen>
+
+    //Search Fragment
+
+    <dimen name="search_margin_top">18dp</dimen>
+    <dimen name="search_margin_horizon">8dp</dimen>
+
+    //{Post} Item
+
+    <dimen name="post_layout_height">500dp</dimen>
+    <dimen name="post_layout_margin_vertical">5dp</dimen>
+    <dimen name="post_image_item_height">300dp</dimen>
+    <dimen name="post_image_hei_wei">30dp</dimen>
+    <dimen name="post_padding">2dp</dimen>
+    <dimen name="post_favourite_hei_wei">25dp</dimen>
+
+
+    //Item Post User
+
+    <dimen name="item_post_width">180dp</dimen>
+    <dimen name="item_post_height">200dp</dimen>
+
+    //Item Main Post
+
+    <dimen name="post_image_height">300dp</dimen>
+    <dimen name="profile_text_height">45dp</dimen>
+    <dimen name="profile_margin_horizon">12dp</dimen>
+    <dimen name="profile_button_margin_top">12dp</dimen>
+    <dimen name="button_margin_end">15dp</dimen>
+    <dimen name="profile_text_margin_Bottom">153dp</dimen>
+    <dimen name="profile_margin_text_top">67dp</dimen>
+
+    <dimen name="tab_layout_weight">409dp</dimen>
+
+
+
+</resources>

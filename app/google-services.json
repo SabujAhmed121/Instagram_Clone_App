@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "336126112622",
+    "project_id": "instagram-alter",
+    "storage_bucket": "instagram-alter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336126112622:android:bcfc18fbe9edb49a43477f",
+        "android_client_info": {
+          "package_name": "com.example.instagramclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336126112622-j47mkufhc5somh52gnul38s9ghlcqso8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwU07jm2Yyd5XwqeIVVzhr57cW0q7xrzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336126112622-j47mkufhc5somh52gnul38s9ghlcqso8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

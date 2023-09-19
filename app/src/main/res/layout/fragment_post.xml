@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/searchBgColour"
+    android:layout_height="@dimen/logo_margin_top"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mainfragment.PostFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_left_view"
+        app:cardCornerRadius="@dimen/search_margin_horizon"
+        app:cardElevation="@dimen/card_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/searchBgColour"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/create_post_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.08"
+                android:text="@string/create_post"
+                android:background="@color/bottomGrey"
+                android:textColor="@color/yellowType"
+                android:textStyle="bold"
+                android:paddingBottom="@dimen/margin_left_view"
+                android:paddingTop="@dimen/margin_horizon"
+                android:paddingHorizontal="@dimen/margin_horizon"
+                android:drawablePadding="@dimen/margin_left_view"
+                android:textSize="@dimen/button_text_size"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:drawableLeftCompat="@drawable/posticon" />
+
+            <TextView
+                android:id="@+id/create_rell_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.08"
+                android:text="@string/create_rell"
+                android:background="@color/bottomGrey"
+                android:textColor="@color/yellowType"
+                android:textStyle="bold"
+                android:paddingBottom="@dimen/home_margin_vertical"
+                android:paddingTop="@dimen/margin_horizon"
+                android:paddingHorizontal="@dimen/margin_horizon"
+                android:drawablePadding="@dimen/home_margin_vertical"
+                android:textSize="@dimen/button_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:drawableLeftCompat="@drawable/videobutton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PostActivity">
+
+
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="@dimen/post_wei_hei"
+        android:layout_height="@dimen/post_wei_hei"
+        android:layout_marginTop="@dimen/post_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imageicon"
+        android:contentDescription="@string/select_image_or_video" />
+
+    <EditText
+        android:id="@+id/postCaption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/post_margin_top_edit"
+        android:layout_marginHorizontal="@dimen/margin_horizon"
+        android:background="@drawable/button_bg"
+        android:ems="10"
+        android:hint="@string/write_a_caption"
+        android:textColorHint="@color/textDarkGrey"
+        android:inputType="text"
+        android:padding="@dimen/text_size_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postImage"
+        android:autofillHints="Chose" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/image_top_margin"
+        android:layout_height="@dimen/image_top_margin"
+        android:layout_marginTop="@dimen/image_top_margin"
+        app:layout_constraintStart_toStartOf="@+id/postCaption"
+        app:layout_constraintTop_toBottomOf="@+id/postCaption"
+        app:srcCompat="@drawable/imageicon"
+        android:contentDescription="@string/extra" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_horizon"
+        android:letterSpacing="0.06"
+        android:text="@string/share_to_post"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_horizon"
+        android:layout_marginHorizontal="@dimen/margin_horizon"
+        android:fontFamily="@font/aref_ruqaa_bold"
+        android:letterSpacing="0.08"
+        android:text="@string/post_next_details"
+        android:textColor="@color/whiteIsh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/btn_post_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/search_margin_horizon"
+        android:layout_marginStart="@dimen/search_margin_horizon"
+        android:layout_marginBottom="@dimen/search_margin_horizon"
+        android:backgroundTint="@color/pinkLight"
+        android:paddingHorizontal="@dimen/post_padding_horizon"
+        android:paddingVertical="10dp"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/padding_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_post_complete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.291" />
+
+    <Button
+        android:id="@+id/btn_post_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/search_margin_horizon"
+        android:backgroundTint="@color/pinkLight"
+        android:paddingHorizontal="@dimen/post_padding_horizon_second"
+        android:paddingVertical="@dimen/search_margin_horizon"
+        android:text="@string/post"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/padding_horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_post_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_post_cancel"
+        app:layout_constraintTop_toTopOf="@+id/btn_post_cancel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
