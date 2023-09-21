@@ -32,13 +32,15 @@
                         android:id="@+id/imageView11"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/bottomGrey"
+                        android:background="#A4A3A1"
                         android:gravity="center"
+                        android:paddingEnd="30dp"
+                        android:textColor="@color/darkBlack"
                         android:paddingTop="2dp"
                         android:paddingBottom="6dp"
-                        android:backgroundTint="@color/black"
                         android:text="@string/toolbar_name"
-                        android:textSize="@dimen/text_size_main_text" />
+                        android:textSize="@dimen/text_size_main_text"
+                        tools:ignore="RtlSymmetry" />
 
 
 

@@ -13,6 +13,7 @@ import com.example.instagramclone.ViewPagerAdapter
 import com.example.instagramclone.databinding.FragmentProfileBinding
 import com.example.instagramclone.model.UserModel
 import com.example.instagramclone.utils.User_Node
+import com.example.instagramclone.viewmodel.ProfileFragmentViewModel
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject

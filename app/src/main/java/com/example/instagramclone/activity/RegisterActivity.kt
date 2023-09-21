@@ -11,6 +11,7 @@ import com.example.instagramclone.databinding.ActivityRegisterBinding
 import com.example.instagramclone.model.UserModel
 import com.example.instagramclone.utils.User_Profile_Folder
 import com.example.instagramclone.utils.uploadImage
+import com.example.instagramclone.viewmodel.RegistrationAndLoginViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

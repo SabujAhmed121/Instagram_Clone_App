@@ -1,4 +1,4 @@
-package com.example.instagramclone.mainfragment
+package com.example.instagramclone.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
