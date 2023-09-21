@@ -6,11 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.instagramclone.adapter.UserVideoRealsAdapter
 import com.example.instagramclone.databinding.FragmentMyRellItemBinding
 import com.example.instagramclone.model.Reals
 import com.example.instagramclone.utils.Reel_User
+import com.example.instagramclone.viewmodel.PostAndRealsViewModel
+import com.google.api.Distribution.BucketOptions.Linear
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
@@ -24,6 +29,8 @@ class MyRellItemFragment : Fragment() {
     }
     lateinit var realsList : ArrayList<Reals>
     lateinit var adapter: UserVideoRealsAdapter
+    private lateinit var viewModel: PostAndRealsViewModel
+
 
 
     override fun onCreateView(
@@ -31,33 +38,30 @@ class MyRellItemFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        realsList = ArrayList<Reals>()
-        adapter = UserVideoRealsAdapter(realsList, requireContext())
-        binding.rvForRell.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        binding.rvForRell.adapter = adapter
-        binding.rvForRell.setHasFixedSize(false)
-
+        viewModel = ViewModelProvider(this)[PostAndRealsViewModel::class.java]
 
         setUPRealsForUserPost()
-        // Inflate the layout for this mainfragment
+
         return binding.root
     }
 
     private fun setUPRealsForUserPost() {
 
-        Firebase.firestore.collection(FirebaseAuth.getInstance().currentUser!!.uid + Reel_User).get().addOnSuccessListener {
+        realsList = ArrayList<Reals>()
+        adapter = UserVideoRealsAdapter(realsList, requireContext())
+        binding.rvForRell.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.rvForRell.adapter = adapter
+        binding.rvForRell.setHasFixedSize(false)
 
-            val templist = ArrayList<Reals>()
+        val userId = FirebaseAuth.getInstance().currentUser!!.uid
+        viewModel.fetchUserRealsData(userId)
 
-            for (i in it.documents) {
-                val user = i.toObject<Reals>()!!
-                templist.add(user)
-            }
 
-            realsList.addAll(templist)
+        viewModel.userRealsList.observe(viewLifecycleOwner, Observer { reals ->
+            realsList.clear()
+            realsList.addAll(reals)
             adapter.notifyDataSetChanged()
-
-        }
+        })
     }
 
 }

@@ -34,10 +34,13 @@
                         android:layout_height="match_parent"
                         android:background="@color/bottomGrey"
                         android:gravity="center"
+                        android:paddingEnd="30dp"
                         android:paddingTop="2dp"
                         android:paddingBottom="6dp"
+                        android:textColor="@color/darkBlack"
                         android:text="@string/toolbar_name"
-                        android:textSize="@dimen/text_size_main_text" />
+                        android:textSize="@dimen/text_size_main_text"
+                        tools:ignore="RtlSymmetry" />
 
 
 

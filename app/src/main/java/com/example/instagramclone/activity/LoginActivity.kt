@@ -7,9 +7,10 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.instagramclone.MainActivity
 import com.example.instagramclone.databinding.ActivityLoginBinding
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import com.example.instagramclone.viewmodel.RegistrationAndLoginViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
 
@@ -24,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(RegistrationAndLoginViewModel::class.java)
 
-        binding.donHave!!.setOnClickListener {
+        binding.donHave.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
@@ -37,7 +38,10 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.emailLogin.text.toString()
             val password = binding.passwordLogin.text.toString()
 
-            viewModel.loginForUser(email, password)
+            CoroutineScope(Dispatchers.IO).launch{
+                viewModel.loginForUser(email, password)
+            }
+
 
             viewModel.loginStatus.observe(this) { isSuccess ->
                 if (isSuccess) {

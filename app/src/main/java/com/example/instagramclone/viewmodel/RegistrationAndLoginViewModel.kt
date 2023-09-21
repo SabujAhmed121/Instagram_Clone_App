@@ -1,4 +1,4 @@
-package com.example.instagramclone.activity
+package com.example.instagramclone.viewmodel
 
 import android.app.Application
 import android.content.ContentValues
@@ -60,11 +60,25 @@ class RegistrationAndLoginViewModel(application: Application) : AndroidViewModel
 
 
 
-    fun loginForUser(email: String, password: String){
-        auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener{ task ->
-                loginStatus.value = task.isSuccessful
+    suspend fun loginForUser(email: String, password: String){
+
+
+        try {
+            withContext(Dispatchers.IO) {
+                async {
+                    auth.signInWithEmailAndPassword(email, password).await()
+
+                }.await()
             }
+
+            withContext(Dispatchers.Main) {
+                loginStatus.value = true
+            }
+        }catch (e:Exception){
+            loginStatus.value = true
+        }
+
+
     }
 }
 

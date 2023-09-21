@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_margin="8dp"
     android:background="@drawable/edit_bg"
@@ -85,17 +84,20 @@
         android:id="@+id/love_icon"
         android:layout_width="@dimen/post_image_hei_wei"
         android:layout_height="@dimen/post_image_hei_wei"
+        android:layout_margin="@dimen/margin_horizon"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/extra"
         android:padding="@dimen/post_padding"
-        android:layout_margin="@dimen/search_margin_horizon"
+        android:src="@drawable/white_favourite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/white_favourite"
-        android:contentDescription="@string/extra" />
+        app:layout_constraintTop_toBottomOf="@+id/posted_image"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/send_icon"
-        android:layout_width="@dimen/post_image_hei_wei"
-        android:layout_height="@dimen/post_image_hei_wei"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:padding="@dimen/post_padding"
         android:layout_marginStart="@dimen/margin_horizon"
         app:layout_constraintBottom_toBottomOf="@+id/love_icon"
@@ -106,8 +108,8 @@
 
     <ImageView
         android:id="@+id/bookmark_icon"
-        android:layout_width="@dimen/post_favourite_hei_wei"
-        android:layout_height="@dimen/post_favourite_hei_wei"
+        android:layout_width="@dimen/post_image_hei_wei"
+        android:layout_height="@dimen/post_image_hei_wei"
         android:layout_marginEnd="@dimen/search_margin_horizon"
         android:src="@drawable/white_bookmark"
         android:contentDescription="@string/extra"

@@ -24,18 +24,12 @@ class PostFragment : BottomSheetDialogFragment() {
 
             activity?.startActivity(Intent(requireContext(), PostActivity::class.java))
 
-//            val bottomSheetFragment = MyBottomSheetDialogFragment()
-//            bottomSheetFragment.changeLayout(R.layout.fragment_bottom_sheet_dialog) // Pass the ID of the new layout
-//            bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
         }
 
         binding.createRellBt.setOnClickListener {
 
             activity?.startActivity(Intent(requireContext(), RealsActivity::class.java))
 
-//            val bottomSheetFragment = MyBottomSheetDialogFragment()
-//            bottomSheetFragment.changeLayout(R.layout.bottomsheetdialogforrell) // Pass the ID of the new layout
-//            bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
         }
 
         return binding.root
