@@ -1,21 +1,23 @@
 package com.example.instagramclone.mainfragment
 
- import android.annotation.SuppressLint
  import android.os.Bundle
- import android.view.LayoutInflater
- import android.view.View
- import android.view.ViewGroup
- import androidx.fragment.app.Fragment
- import androidx.lifecycle.Observer
- import androidx.lifecycle.ViewModelProvider
- import androidx.recyclerview.widget.LinearLayoutManager
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
  import com.example.instagramclone.adapter.MainFollowingSetAdapter
  import com.example.instagramclone.adapter.MainPostFragmentAdapter
- import com.example.instagramclone.databinding.FragmentHomeBinding
- import com.example.instagramclone.model.Post
+import com.example.instagramclone.databinding.FragmentHomeBinding
+import com.example.instagramclone.model.Post
  import com.example.instagramclone.model.UserModel
- import com.example.instagramclone.viewmodel.HomeFragmentViewModel
+ import com.example.instagramclone.utils.Follow
+ import com.example.instagramclone.utils.Post_user
  import com.google.firebase.auth.FirebaseAuth
+ import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
+import com.google.firebase.ktx.Firebase
 
 
 class HomeFragment : Fragment() {
@@ -28,8 +30,6 @@ class HomeFragment : Fragment() {
 
     lateinit var followingList : ArrayList<UserModel>
     lateinit var adapter2: MainFollowingSetAdapter
-    private lateinit var viewModel: HomeFragmentViewModel
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,8 +38,6 @@ class HomeFragment : Fragment() {
 
         postList = ArrayList()
         adapter = MainPostFragmentAdapter(postList, requireContext())
-        viewModel = ViewModelProvider(this)[HomeFragmentViewModel::class.java]
-
 
 
         followingList = ArrayList()
@@ -51,21 +49,28 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     private fun setUPPostForAll() {
 
         binding.mainPostRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.mainPostRv.setHasFixedSize(false)
         binding.mainPostRv.adapter = adapter
 
-        viewModel.postList.observe(viewLifecycleOwner, Observer { posts ->
+        Firebase.firestore.collection(Post_user).get().addOnSuccessListener {
+
+            val templist = ArrayList<Post>()
             postList.clear()
-            postList.addAll(posts)
+
+            for (i in it.documents) {
+                val user = i.toObject<Post>()!!
+                templist.add(user)
+            }
+
+            postList.addAll(templist)
+            postList.reverse()
+
             adapter.notifyDataSetChanged()
-        })
 
-        viewModel.fetchPosts()
-
+        }
     }
 
     private fun setUpFollowingData(){
@@ -75,15 +80,31 @@ class HomeFragment : Fragment() {
         binding.recyclerView3.adapter = adapter2
 
 
-        val userId = FirebaseAuth.getInstance().currentUser!!.uid
-        viewModel.fetchFollowingData(userId)
+        Firebase.firestore.collection(FirebaseAuth.getInstance().currentUser!!.uid+Follow).get().addOnSuccessListener {
+
+            try {
+                val templist = ArrayList<UserModel>()
+                followingList.clear()
+
+                for (i in it.documents) {
+                    val user = i.toObject<UserModel>()!!
+                    templist.add(user)
+                }
+
+                followingList.addAll(templist)
+                followingList.reverse()
+
+                adapter2.notifyDataSetChanged()
+
+            }catch (e : Exception){
+
+            }
 
 
-        viewModel.followingList.observe(viewLifecycleOwner, Observer { following ->
-            followingList.clear()
-            followingList.addAll(following)
-            adapter2.notifyDataSetChanged()
-        })
-
+        }
     }
+
+
+
+
 }
